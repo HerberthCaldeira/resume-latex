@@ -15,48 +15,58 @@
 \small
 
 \cvsection{Graduação}
-\cventry{Unimontes}{Sistemas de Informação}{01/2021 -- 06/2025}
+\cventry{Unimontes}{Sistemas de Informação}{2012 -- 2016}
 
 \cvsection{Experiências}
 
-\cventry{SoteroTech}{Programador Full Stack}{01/2023 -- 02/2025}
-\textbf{Tecnologias:} Postgresql, MySQL, Laravel Framework, Livewire, React.js, TDD (PHPUnit e Pest), Node.js, TypeScript, JavaScript, HTML, CSS, Docker e Ansible.\par\vspace{4pt}
+\cventry{Grupo Adriano Cobuccio}{Engenheiro de Software}{08/2025 -- atual}
+\textbf{Tecnologias:} Laravel, Docker, CodeIgniter 3, jQuery, Webservice Java.\par\vspace{4pt}
 \textbf{Principais atividades:}\vspace{2pt}
 \begin{itemize}
-  \item Desenvolvimento de sistema de gestão de chamados utilizando Laravel Framework e Livewire.
-  \item Desenvolvimento de um SaaS para uma empresa do setor educacional, utilizando Laravel Framework, React.js e TypeScript.
-  \item Desenvolvimento de um SaaS para uma empresa do setor de saúde com Node.js e TypeScript.
-  \item Integração com serviços e bibliotecas de terceiros, como PagSeguro, Agora.io e Jitsi.
-  \item Desenvolvimento de APIs RESTful eficientes e escaláveis.
-  \item Construção de Single-Page Applications (SPA) com React.js/TypeScript.
-  \item Implementação de comunicação em tempo real via WebSocket.
-  \item Automação de deploy e integração contínua para otimização do fluxo de desenvolvimento com Shell script, Ansible e GitHub Actions.
+  \item Otimizei relatórios em bases de dados volumosas com reescrita de queries SQL, criação de índices e streaming de resultados (download progressivo), eliminando gargalos de memória e reduzindo o tempo de resposta de minutos para segundos.
+  \item Implementei controle de concorrência via locks em fluxos críticos, prevenindo condições de corrida e inconsistências geradas por requisições simultâneas sobre os mesmos recursos.
+  \item Refatorei a base de código criando camada de service e aplicando responsabilidade única (SRP), além de padronizar o estilo conforme as PSRs, melhorando legibilidade, testabilidade e manutenção.
+  \item Realizei manutenção e correção de bugs em um webservice legado em Java, garantindo a continuidade das integrações com o sistema.
+  \item Mantenho documentação contínua de fluxos e regras de negócio, reduzindo tempo de onboarding e dependência de conhecimento tácito na equipe.
+\end{itemize}
+
+\cventry{SoteroTech}{Programador Full Stack}{01/2023 -- 02/2025}
+\textbf{Tecnologias:} PostgreSQL, MySQL, Laravel Framework, Livewire, React.js, TDD (PHPUnit e Pest), Node.js, TypeScript, JavaScript, HTML, CSS, Docker e Ansible.\par\vspace{4pt}
+\textbf{Principais atividades:}\vspace{2pt}
+\begin{itemize}
+  \item Desenvolvi 4 sistemas distintos nesse período: um sistema de gestão de chamados, um SaaS educacional (cursos de preparação para o Revalida) com milhares de alunos, um sistema de telemedicina e uma rede de divulgação de eventos esportivos.
+  \item Estabeleci a cultura de testes automatizados na equipe, aplicando TDD (PHPUnit, Pest e Jest) e alcançando cobertura superior a 90\% em um dos sistemas, garantindo a confiabilidade das regras de negócio.
+  \item Introduzi conceitos e padrões de qualidade de código no time, como DDD, Clean Code, SOLID e Action Pattern, elevando a legibilidade, a testabilidade e a manutenibilidade dos projetos.
+  \item Implementei o fluxo completo de telemedicina com videochamada via Agora.io, cobrindo agendamento de consultas, cadastro de profissionais/agendas e as funcionalidades dos lados médico (exames, coleta de informações, atestado) e paciente.
+  \item Implementei atualização de interface em tempo real via WebSocket, permitindo que ações de um usuário refletissem instantaneamente na tela de outro (por exemplo, o professor liberando conteúdo para os alunos).
+  \item Desenvolvi um bot de atendimento via WhatsApp com webhooks e a API da Digisac, utilizando o padrão State Machine e Redis para gerenciar o estado das conversas e jobs para processamento assíncrono das mensagens, automatizando três fluxos do sistema.
+  \item Desenvolvi um dashboard administrativo em React.js com backend em Node.js e uma API RESTful consumida por um aplicativo mobile.
+  \item Integrei serviços de terceiros ao SaaS educacional: PagSeguro (pagamentos e inscrições), Vimeo (hospedagem e reprodução de videoaulas) e Jitsi (aulas ao vivo na sala virtual).
 \end{itemize}
 
 \cventry{Talkee Digital}{Programador Full Stack}{06/2021 -- 06/2022}
-\textbf{Tecnologias:} Docker, Postgresql, HTML, CSS, Laravel Framework, JavaScript, TypeScript, React.js e InertiaJs.\par\vspace{4pt}
+\textbf{Tecnologias:} Docker, PostgreSQL, HTML, CSS, Laravel Framework, JavaScript, TypeScript, React.js e Inertia.js.\par\vspace{4pt}
 \textbf{Principais atividades:}\vspace{2pt}
 \begin{itemize}
-  \item Desenvolvimento e otimização de um sistema CRM.
-  \item Criação de APIs RESTful com Laravel.
-  \item Implementação de Single-Page Applications (SPA) com React.js e TypeScript.
-  \item Integração com WhatsApp.
-  \item Implementação de comunicação em tempo real via WebSocket.
-  \item Automação de deploy com Shell Script e Ansible.
+  \item Desenvolvi Single-Page Applications (SPA) com React.js e TypeScript e APIs RESTful em Laravel, integrando frontend e backend do CRM e padronizando a comunicação entre os sistemas.
+  \item Otimizei a performance do sistema criando índices no PostgreSQL para acelerar queries lentas e implementando cache de consultas frequentes, reduzindo a carga no banco e o tempo de resposta das APIs.
+  \item Implementei comunicação em tempo real via WebSocket, atualizando elementos da interface automaticamente sem recarregar a página.
+  \item Integrei o CRM ao WhatsApp com a biblioteca whatsapp-web.js, permitindo comunicação direta com clientes dentro do próprio sistema.
+  \item Utilizei filas (jobs) do Laravel para processar notificações de forma assíncrona, disparadas por eventos do funil do CRM (ex.: criação de lead), evitando bloqueios na aplicação.
+  \item Utilizei Shell Script e Ansible para gerenciar a infraestrutura e automatizar o processo de deploy, padronizando a publicação de novas versões e facilitando a manutenção dos servidores.
 \end{itemize}
 
 \cventry{MedPlim Solutions em Tecnologia LTDA}{Programador Full Stack}{10/2017 -- 09/2020}
 \textbf{Tecnologias:} MySQL, HTML, CSS, PHP, JavaScript, jQuery, Laravel e CodeIgniter.\par\vspace{4pt}
 \textbf{Principais atividades:}\vspace{2pt}
 \begin{itemize}
-  \item Desenvolvimento de um sistema de gestão para clínicas médicas.
-  \item Aplicação do padrão MVC (Model-View-Controller) para organização do código.
-  \item Implementação de interfaces dinâmicas com JavaScript, jQuery e AJAX.
-  \item Implementação de funcionalidades para otimizar a gestão de atendimentos, agendamentos e o setor financeiro de clínicas médicas.
+  \item Desenvolvi um sistema de gestão para clínicas médicas usado no dia a dia operacional, implementando os módulos de estoque, financeiro e agenda de atendimentos.
+  \item Estruturei a aplicação com arquitetura MVC para reduzir o acoplamento entre as camadas e facilitar a manutenção e evolução do sistema.
+  \item Desenvolvi interfaces dinâmicas com JavaScript, jQuery e AJAX, eliminando recarregamentos desnecessários de página e agilizando a navegação dos usuários.
 \end{itemize}
 
 \cvsection{Certificações}
-\textbf{OOPMentor} --- \textit{Object-Oriented Software Design And Quality}
+\cventry{OOPMentor}{Object-Oriented Software Design And Quality}{2024}
 
 \switchcolumn
 
@@ -64,7 +74,7 @@
 \small
 
 \cvsection{Habilidades}
-PostgreSQL, MySQL, SQLite, SQL, AWS, CI/CD, Docker, Linux, HTML, CSS, APIs RESTful, PHP, Laravel Framework, TDD (PHPUnit e Pest), Livewire, AlpineJs, React.js, Bootstrap, TailwindCSS, Node.js, TypeScript, JavaScript, Ansible, Design Patterns, MVC, Clean Code e Clean Architecture.
+PostgreSQL, MySQL, SQLite, SQL, AWS, CI/CD, Docker, Linux, HTML, CSS, APIs RESTful, PHP, Laravel Framework, TDD (PHPUnit e Pest), Livewire, Alpine.js, React.js, Bootstrap, TailwindCSS, Node.js, TypeScript, JavaScript, Ansible, Design Patterns, DDD (Domain-Driven Design), SOLID, MVC, Clean Code e Clean Architecture.
 
 \cvsection{Links}
 LinkedIn:\\
