@@ -1,0 +1,63 @@
+% Estilo do curriculo PT: replica a estrutura do
+% HerberthCaldeira-Curriculo-2025.pdf (cabecalho horizontal + coluna
+% principal a esquerda / sidebar a direita, titulos em azul, sans-serif).
+% Arquivo separado de common/style.tex para nao afetar en/resume.tex.
+
+\usepackage[a4paper,margin=1.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{paracol}
+
+\definecolor{accent}{HTML}{1F5C99}
+\definecolor{textgray}{gray}{0.45}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% Coluna principal (esquerda, mais larga) + sidebar (direita).
+\columnratio{0.64}
+\setlength{\columnsep}{26pt}
+
+% Titulo de secao: negrito, maiusculas, cor de destaque, sem regra.
+% Comando manual (nao usa \section/titlesec) porque \@startsection
+% conflita com o controle de colunas do paracol.
+\newcommand{\cvsection}[1]{%
+  \par\vspace{12pt}%
+  {\color{accent}\bfseries\MakeUppercase{#1}}\par\vspace{5pt}%
+}
+
+% Cabecalho: nome + subtitulo a esquerda, contato alinhado a direita.
+\newcommand{\cvheader}[4]{%
+  % #1 nome, #2 subtitulo (cargo, idade), #3 localizacao, #4 telefone+email (ja formatado)
+  \noindent
+  \begin{minipage}[t]{0.62\textwidth}
+    {\LARGE\bfseries #1}\par\vspace{2pt}
+    {\large #2}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.34\textwidth}
+    \raggedleft
+    #3\\
+    \textbf{#4}
+  \end{minipage}
+  \par\vspace{18pt}
+}
+
+% Entrada de experiencia/educacao: empresa/instituicao em negrito,
+% cargo/curso em italico, periodo em cinza na linha de baixo.
+\newcommand{\cventry}[3]{%
+  \textbf{#1} --- \textit{#2}\par
+  {\small\color{textgray}#3}\par\vspace{4pt}%
+}
+
+% Listas compactas
+\setlist[itemize]{leftmargin=*, itemsep=3pt, topsep=3pt, parsep=0pt}

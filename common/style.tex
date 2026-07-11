@@ -1,0 +1,50 @@
+% Estilo compartilhado: curriculo minimalista, duas colunas, sem foto.
+% Incluido pelos arquivos de conteudo em pt/ e en/ via \input{../common/style.tex}
+
+\usepackage[a4paper,margin=1.4cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{paracol}
+
+\definecolor{textgray}{gray}{0.35}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+
+% Colunas: barra lateral (esquerda) + conteudo principal (direita).
+% paracol permite que cada coluna flua e quebre de pagina de forma
+% independente, o que uma tabular normal nao suporta.
+\columnratio{0.32}
+\setlength{\columnsep}{22pt}
+
+% Titulo de secao: versalete, com regra fina embaixo.
+% Comando manual (nao usa \section/titlesec) porque \@startsection
+% conflita com o controle de colunas do paracol.
+\newcommand{\cvsection}[1]{%
+  \par\vspace{8pt}%
+  {\normalsize\scshape\bfseries #1}\par\vspace{2pt}%
+  \noindent\rule{\linewidth}{0.4pt}\par\vspace{4pt}%
+}
+
+% Listas compactas para experiencias
+\setlist[itemize]{leftmargin=*, itemsep=1pt, topsep=2pt, parsep=0pt}
+
+% Nome + cargo no topo da barra lateral
+\newcommand{\resumename}[2]{%
+  {\Large\bfseries #1}\\[2pt]
+  {\small\itshape\color{textgray}#2}\par\vspace{8pt}
+}
+
+% Item de experiencia: cargo, empresa, periodo alinhado a direita
+\newcommand{\jobentry}[3]{%
+  \textbf{#1}\hfill{\small\color{textgray}#3}\\
+  {\small\itshape #2}\par\vspace{2pt}
+}
